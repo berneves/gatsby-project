@@ -2,6 +2,7 @@ import * as React from "react"
 import {Link} from "gatsby"
 import Layout from "../components/layout"
 import {title} from "../components/my-components.module.css"
+import { StaticImage } from "gatsby-plugin-image"
 
 
   const TestProp = (props) => {
@@ -26,6 +27,7 @@ import {title} from "../components/my-components.module.css"
             <p>Teste son</p>
           </Layout>
           <TestProp name= "Be"></TestProp>
+          <StaticImage alt="Image Testing" src="../images/icon.png"/>
         </main>
       )
     }
