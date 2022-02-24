@@ -1,0 +1,24 @@
+import React from "react";
+import { Link } from "gatsby"
+import { container } from "./layout.module.css"
+
+const Layout = ({ pageTitle, children}) => {
+    return (
+      <div>
+        <title>{pageTitle}</title>
+        <h1>Hello, stranger! This is the page I am developing to learn Gatsby</h1>
+        <nav>
+          <ul>
+            <li><Link to="/">Home</Link></li>
+            <li><Link to="/about">About</Link></li>
+          </ul>
+        </nav>
+        <main>
+          <h1 className={container}>{pageTitle}</h1>
+          {children}
+        </main>
+      </div>
+    )
+  }
+
+  export default Layout
