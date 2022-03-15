@@ -30,10 +30,10 @@ const BlogPage = () => {
 export default BlogPage */
 
 import * as React from 'react'
-import Layout from '../components/layout'
-import { graphql } from 'gatsby'
+import Layout from '../../components/layout'
+import { Link, graphql } from 'gatsby'
 import { MDXRenderer } from 'gatsby-plugin-mdx'
-import {mdx} from "../components/my-components.module.css"
+import {mdx} from "../../components/my-components.module.css"
 
 const BlogPage = ({data}) => {
   return (
@@ -46,10 +46,12 @@ const BlogPage = ({data}) => {
                   <p>{node.frontmatter.title}</p>
                   <p>Olá</p>
                   <p>{node.frontmatter.date}</p>
-                  <p>body below</p>
-                  <div className = {mdx}>
+                  {/* <div className = {mdx}>
                     <MDXRenderer>{node.body}</MDXRenderer>
-                  </div>
+                  </div> */}
+                  <Link to = {`/blog/${node.slug}`}>
+                    {node.frontmatter.title}
+                  </Link>  
                 </article>
               ))
             }
@@ -67,7 +69,7 @@ query MyQuery {
         title
       }
       id
-      body
+      slug
     }
   }
 }`
