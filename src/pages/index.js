@@ -23,7 +23,7 @@ import { StaticImage } from "gatsby-plugin-image"
           <Link to = "/about"> Link </Link>
           <p>I'm making this by following the Gatsby Tutorial.</p>  */}
           <Layout pageTitle="Bernardo learning Gatsby">
-            <p>Testing this children thing</p>
+            <p>Testing this children thing 2</p>
             <p>Teste son</p>
           </Layout>
           <TestProp name= "Be"></TestProp>
